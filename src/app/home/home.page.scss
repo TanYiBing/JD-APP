@@ -37,34 +37,21 @@ ion-slides {
     ul {
         list-style: none;
     }
-    // padding:.4rem;
     
     li{
-        // width: 6.6rem;
         width: 80px;
-        // height: 14.8rem;
         height: 120px;
         float: left;
-        // margin-right: .6rem;
         margin-right: 10px;
-        // .rec_shop_detial{
-        //     padding:.4rem 0rem;
-        //     margin:0px;
-        //     height: 3.2rem;
-        //     overflow: hidden;
-        // }
-        // img{
-        //     width:6rem;
-        //     height: 6rem;
-        //     display: block;
-        //     margin:0 auto;
-        // }
         p{
-            // padding:.2rem 0px;
             padding: 4px;
             margin: 0px;
             text-align: center;
         }
         
     }
+}
+
+ion-col {
+    text-align: center;
 }

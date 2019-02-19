@@ -28,7 +28,7 @@
       <li *ngFor="let item of recList">
         <img src="{{item.pic}}" alt="">
 
-        <p>{{item.title}}</p>
+        <p class="rec_shop_detial">{{item.title}}</p>
       </li>
     </ul>
   </div>
@@ -36,4 +36,14 @@
   <div class="home_title">
     猜你喜欢
   </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col  align-self-center size="6" *ngFor="let item of recList">
+        <img src="{{item.pic}}" alt="">
+        
+        <p class="hot_shop_detial">{{item.title}}</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
