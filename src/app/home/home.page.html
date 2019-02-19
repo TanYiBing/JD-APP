@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      首页
+      狗东
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <!-- 顶部轮播开始 -->
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <img src="assets/imgs/slide01.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/slide02.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/slide03.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+  <!-- 顶部轮播结束 -->
+  <div class="home_title">
+    精品推荐
+  </div>
+  <div class="slide_product">
+    <ul class="clearfix" [ngStyle]="{'width':bestListWidth}">
+      <li *ngFor="let item of recList">
+        <img src="{{item.pic}}" alt="">
+
+        <p>{{item.title}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="home_title">
+    猜你喜欢
+  </div>
+</ion-content>
