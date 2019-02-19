@@ -6,4 +6,59 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <dl class="cart_list">
+    <dt>
+      <ion-checkbox></ion-checkbox>
+
+      <img src="assets/imgs/03.jpg"/>
+
+    </dt>
+    <dd>
+      <h2 class="cart_title">商品名称</h2>
+      <div class="cart_info">
+        <div class="cart_price">
+          ¥20元
+        </div>
+        <div class="cart_num">
+          <div class="input_left">-</div>
+          <div class="input_center">
+            <input type="text" readonly="readonly" name="num" id="num" value="2" />
+          </div>
+          <div class="input_right">+</div>
+
+        </div>
+
+      </div>
+    </dd>
+  </dl>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="all_price">
+      <ion-checkbox disabled="true"></ion-checkbox>
+      全选
+      <strong>合计:100元</strong>
+    </div>
+    <ion-button slot="end">
+      <div class="dopay">
+        去结算
+      </div>
+
+    </ion-button>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <div class="all_price">
+
+      <ion-checkbox disabled="true"></ion-checkbox>
+      全选
+    </div>
+    <ion-button slot="end">
+      <div class="dodelete">
+        删除
+      </div>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
