@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { LoginPage } from '../login/login.page';
 
 @Component({
   selector: 'app-user',
@@ -11,7 +10,11 @@ import { LoginPage } from '../login/login.page';
 export class UserPage {
   constructor(private navCtrl: NavController) {}
 
-  handleLoginClick() {
-    this.navCtrl.navigateForward('/login');
+  handleLoginClicked() {
+    this.navCtrl.navigateForward('login');
+  }
+
+  handleRegisterClicked() {
+    this.navCtrl.navigateForward('register');
   }
 }

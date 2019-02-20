@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-title>输入验证码</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="code_info">
+    <h4 class="positive">马上验证手机，激活你的账户</h4>
+    <p class="code_sign_p">验证码已通过短信方式发送至{{tel}}，请输入验证码完成验证，手机绑定是为了验证用户的真实性和账号安全</p>
+  </div>
+
+  <div class="sign_page">
+    <input type="text" placeholder="验证码" />
+    <div class="timer">
+      重新发送(59s)
+    </div>
+  </div>
+  <ion-button class="reg_btn"  expand="block" (click)="handleRegisterpasswordClicked()">下一步</ion-button>
+
+</ion-content>
