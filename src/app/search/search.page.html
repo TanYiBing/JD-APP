@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="搜索"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="getSearchList()">
+        搜索
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search_content" *ngIf="!flag">
+    <div class="hotlist">
+      <h3 class="search_title">热搜</h3>
+      <p>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+      </p>
+    </div>
+
+    <div class="history" *ngIf="flag">
+      <h3 class="search_title">历史搜索</h3>
+      <ion-list inset>
+        <ion-item>
+
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+
+
+  <div class="list_content">
+    <div class="sub_header">
+      <div>综合</div>
+      <div>销量</div>
+      <div>价格</div>
+    </div>
+
+    <ion-list lines="full">
+      <ion-item *ngFor="let item of recList">
+        <ion-thumbnail slot="start">
+          <img src="{{item.pic}}" alt="">
+        </ion-thumbnail>
+        <h2>{{item.title}}</h2>
+        <p>价格:
+          <span class="price">123</span>元
+        </p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

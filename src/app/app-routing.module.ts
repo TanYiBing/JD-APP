@@ -5,7 +5,8 @@ const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'registersign', loadChildren: './registersign/registersign.module#RegistersignPageModule' },
-  { path: 'registerpassword', loadChildren: './registerpassword/registerpassword.module#RegisterpasswordPageModule' }
+  { path: 'registerpassword', loadChildren: './registerpassword/registerpassword.module#RegisterpasswordPageModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' }
 
 ];
 @NgModule({
