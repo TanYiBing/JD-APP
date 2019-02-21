@@ -6,15 +6,9 @@
 
 <ion-content>
   <!-- 顶部轮播开始 -->
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <img src="assets/imgs/slide01.png" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/slide02.png" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/imgs/slide03.jpg" alt="">
+  <ion-slides *ngIf="focusList.length>0" pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let item of focusList">
+      <img [src]="config.apiUrl+item.pic" alt="">
     </ion-slide>
   </ion-slides>
   <!-- 顶部轮播结束 -->

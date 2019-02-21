@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -16,12 +17,20 @@ import { AppComponent } from './app.component';
   entryComponents: [],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     IonicModule.forRoot(),
-    AppRoutingModule],
+    AppRoutingModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: 'BASE_CONFIG', useValue: {
+        apiUrl: 'http://39.108.159.135/'
+      }
+    }
   ],
   bootstrap: [AppComponent]
 })
