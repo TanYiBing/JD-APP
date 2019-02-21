@@ -8,7 +8,7 @@ import { StorageService } from '../storage.service';
   templateUrl: './registersign.page.html',
   styleUrls: ['./registersign.page.scss'],
 })
-export class RegistersignPage implements OnInit {
+export class RegistersignPage {
 
   public code = '';  /*验证码*/
   public isShowSend = false;   /*是否显示发送验证码的按钮*/
