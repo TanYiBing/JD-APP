@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpServicesService {
 
+  // 设置post的格式
+  private headers = new Headers({ 'Content-Type': 'application/json' });
+
   constructor(
     private http: HttpClient,
     @Inject('BASE_CONFIG') private config: { apiUrl: string }
@@ -21,5 +24,15 @@ export class HttpServicesService {
     }, function (err) {
       console.log(err);
     });
+  }
+
+  // post 提交数据
+  doPost(apiUrl, json, callback) {
+    const api = this.config.apiUrl + apiUrl;
+    this.http.post(api, JSON.stringify(json), { headers: this.headers }).subscribe(function (res) {
+
+      callback(res.json());
+    });
+
   }
 }
