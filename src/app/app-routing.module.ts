@@ -6,7 +6,8 @@ const routes: Routes = [
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'registersign', loadChildren: './registersign/registersign.module#RegistersignPageModule' },
   { path: 'registerpassword', loadChildren: './registerpassword/registerpassword.module#RegisterpasswordPageModule' },
-  { path: 'search', loadChildren: './search/search.module#SearchPageModule' }
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
+  { path: 'pcontent', loadChildren: './pcontent/pcontent.module#PcontentPageModule' }
 
 ];
 @NgModule({
